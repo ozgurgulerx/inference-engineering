@@ -5,9 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta
       name="description"
-      content="A public inference engineering lab notebook for daily notes, Runpod experiments, AI hardware, serving systems, and production LLM performance."
+      content="A public lab and book project on inference engineering, AI hardware, Runpod experiments, and AI data center design."
     />
-    <title>Inference Engineering</title>
+    <title>Building an AI Data Center from Scratch</title>
     <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="styles.css" />
   </head>
@@ -15,14 +15,16 @@
     <canvas id="stack-scene" aria-hidden="true"></canvas>
 
     <header class="site-header">
-      <a class="brand" href="./" aria-label="Inference Engineering home">
+      <a class="brand" href="./" aria-label="Building an AI Data Center from Scratch home">
         <span class="brand-mark"></span>
-        <span>Inference Engineering</span>
+        <span>AI DC Lab</span>
       </a>
       <nav aria-label="Primary navigation">
+        <a href="book/">Book</a>
         <a href="#days">Days</a>
         <a href="#runpod">Runpod</a>
-        <a href="#structure">Structure</a>
+        <a href="#map">Map</a>
+        <a href="#sources">Sources</a>
         <a href="https://github.com/ozgurgulerx/inference-engineering">GitHub</a>
       </nav>
     </header>
@@ -30,39 +32,74 @@
     <main>
       <section class="hero">
         <div class="hero-copy">
-          <p class="eyebrow">Public lab notebook</p>
-          <h1>Learning inference engineering one real experiment at a time.</h1>
+          <p class="eyebrow">Journal plus book</p>
+          <h1>Building an AI Data Center from Scratch</h1>
           <p class="lede">
-            Daily notes, Runpod experiments, hardware observations, serving
-            benchmarks, and the messy path from model calls to production
-            inference systems.
+            A public inference engineering lab that turns daily Runpod experiments
+            into a structured book on AI hardware, data center design, serving
+            systems, and production LLM performance.
           </p>
           <div class="hero-actions">
-            <a class="button primary" href="https://github.com/ozgurgulerx/inference-engineering/blob/main/days/Day01.md">Start with Day 01</a>
-            <a class="button secondary" href="https://github.com/ozgurgulerx/inference-engineering/blob/main/templates/day.md">Use the day template</a>
+            <a class="button primary" href="book/">Read the book</a>
+            <a class="button secondary" href="https://github.com/ozgurgulerx/inference-engineering/blob/main/days/Day01.md">Start with Day 01</a>
+            <a class="button secondary" href="https://github.com/ozgurgulerx/inference-engineering/blob/main/maps/day-to-book.yml">View the map</a>
+            <a class="button secondary" href="https://github.com/ozgurgulerx/inference-engineering/tree/main/source-material">Prior work</a>
           </div>
         </div>
 
-        <aside class="metrics-panel" aria-label="Lab focus areas">
+        <aside class="metrics-panel" aria-label="Project focus areas">
+          <div>
+            <span class="metric-label">Book route</span>
+            <strong>Data center to production inference</strong>
+          </div>
+          <div>
+            <span class="metric-label">Lab route</span>
+            <strong>Runpod, vLLM, measurements, notes</strong>
+          </div>
           <div>
             <span class="metric-label">Core loop</span>
-            <strong>Write / Run / Measure / Explain</strong>
+            <strong>Write / Run / Measure / Promote</strong>
           </div>
           <div>
-            <span class="metric-label">Lab substrate</span>
-            <strong>Runpod GPUs + vLLM</strong>
-          </div>
-          <div>
-            <span class="metric-label">North star</span>
-            <strong>Tokens, latency, memory, cost</strong>
+            <span class="metric-label">Source base</span>
+            <strong>19 legacy days + prompt system</strong>
           </div>
         </aside>
+      </section>
+
+      <section id="book" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Curated layer</p>
+          <h2>The book is the durable version of the lab.</h2>
+        </div>
+        <div class="track-grid">
+          <a class="track-card accent-mint" href="book/">
+            <span>Book</span>
+            <h3>Building the stack</h3>
+            <p>Power, cooling, networking, hardware, model mechanics, serving, and operations in one progression.</p>
+          </a>
+          <a class="track-card accent-sky" href="https://github.com/ozgurgulerx/inference-engineering/tree/main/book/chapters">
+            <span>Chapters</span>
+            <h3>Structured explanations</h3>
+            <p>Each chapter turns raw work into mental models, tradeoffs, labs, and checklists.</p>
+          </a>
+          <a class="track-card accent-amber" href="https://github.com/ozgurgulerx/inference-engineering/tree/main/book/labs">
+            <span>Labs</span>
+            <h3>Runnable practice</h3>
+            <p>Short exercises for latency baselines, token accounting, batching, load tests, and deployment.</p>
+          </a>
+          <a class="track-card accent-rose" href="https://github.com/ozgurgulerx/inference-engineering/blob/main/book/chapters/00-source-journal-runpod-lab-path.qmd">
+            <span>New chapter</span>
+            <h3>Prior work path</h3>
+            <p>An early book chapter explains how the old journal becomes current Runpod labs.</p>
+          </a>
+        </div>
       </section>
 
       <section id="days" class="section">
         <div class="section-heading">
           <p class="eyebrow">Daily notes</p>
-          <h2>Write first. Polish later.</h2>
+          <h2>Write first. Promote later.</h2>
         </div>
         <div class="day-grid">
           <a class="day-card" href="https://github.com/ozgurgulerx/inference-engineering/blob/main/days/Day01.md">
@@ -73,12 +110,12 @@
           <a class="day-card muted" href="https://github.com/ozgurgulerx/inference-engineering/blob/main/templates/day.md">
             <span>Template</span>
             <h3>Daily note</h3>
-            <p>A repeatable structure for raw notes, questions, commands, results, and reflections.</p>
+            <p>A repeatable structure for raw notes, commands, results, questions, and book placement.</p>
           </a>
           <a class="day-card muted" href="https://github.com/ozgurgulerx/inference-engineering/tree/main/days">
             <span>Index</span>
             <h3>All days</h3>
-            <p>The growing list of daily entries and what each day changed in my understanding.</p>
+            <p>The chronological record of experiments, confusions, measurements, and changed beliefs.</p>
           </a>
         </div>
       </section>
@@ -88,16 +125,74 @@
           <p class="eyebrow">Runpod experiments</p>
           <h2>Every run should leave behind evidence.</h2>
           <p>
-            Runpod experiments should record the GPU, image, model, command,
-            benchmark settings, raw results, cost notes, and what actually
-            changed after measurement.
+            Runpod experiments record the GPU, image, model, command, benchmark
+            settings, raw results, cost notes, and what changed after measurement.
           </p>
         </div>
         <div class="steps">
           <a href="https://github.com/ozgurgulerx/inference-engineering/tree/main/experiments/runpod">Runpod experiment index</a>
+          <a href="https://github.com/ozgurgulerx/inference-engineering/blob/main/experiments/runpod/prior-journal-lab-plan.md">Prior journal Runpod lab plan</a>
           <a href="https://github.com/ozgurgulerx/inference-engineering/blob/main/experiments/runpod/2026-05-11-vllm-smoke-test.md">vLLM smoke test draft</a>
           <a href="https://github.com/ozgurgulerx/inference-engineering/blob/main/templates/runpod-experiment.md">Runpod experiment template</a>
           <a href="https://github.com/ozgurgulerx/inference-engineering/blob/main/templates/benchmark-result.md">Benchmark result template</a>
+        </div>
+      </section>
+
+      <section id="sources" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Prior work</p>
+          <h2>The earlier journal is now a source library.</h2>
+        </div>
+        <div class="track-grid">
+          <a class="track-card accent-mint" href="https://github.com/ozgurgulerx/inference-engineering/tree/main/source-material/prior-inference-journal">
+            <span>Archive</span>
+            <h3>Prior journal</h3>
+            <p>The original 19-day lab sequence, scripts, topic notes, images, and older book draft.</p>
+          </a>
+          <a class="track-card accent-sky" href="https://github.com/ozgurgulerx/inference-engineering/tree/main/prompts">
+            <span>Prompts</span>
+            <h3>Daily coach</h3>
+            <p>The recovered prompt system for generating 3-tier daily inference exercises.</p>
+          </a>
+          <a class="track-card accent-amber" href="https://github.com/ozgurgulerx/inference-engineering/blob/main/source-material/prior-inference-journal/days02/README.md">
+            <span>Curriculum</span>
+            <h3>Full-stack map</h3>
+            <p>The second curriculum broadens the book beyond serving engines into the full inference stack.</p>
+          </a>
+          <a class="track-card accent-rose" href="https://github.com/ozgurgulerx/inference-engineering/blob/main/maps/day-to-book.yml">
+            <span>Map</span>
+            <h3>Promotion path</h3>
+            <p>Each old day now points to the book chapters where it can be reused.</p>
+          </a>
+        </div>
+      </section>
+
+      <section id="map" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Promotion map</p>
+          <h2>The journal and the book now share one structure.</h2>
+        </div>
+        <div class="map-panel">
+          <div>
+            <span>01</span>
+            <strong>Daily note</strong>
+            <p>Write the day in your own words, including open questions and failed paths.</p>
+          </div>
+          <div>
+            <span>02</span>
+            <strong>Experiment record</strong>
+            <p>Capture provider, hardware, commands, metrics, logs, and artifacts.</p>
+          </div>
+          <div>
+            <span>03</span>
+            <strong>Concept note</strong>
+            <p>Extract the reusable mental model, tradeoff, diagram, or checklist.</p>
+          </div>
+          <div>
+            <span>04</span>
+            <strong>Book chapter</strong>
+            <p>Promote only the durable explanation into the curated Quarto book.</p>
+          </div>
         </div>
       </section>
 
@@ -109,7 +204,7 @@
         <div class="structure-grid">
           <div class="structure-card">
             <strong>days/</strong>
-            <p>Daily writing in my own words.</p>
+            <p>Daily writing in first person.</p>
           </div>
           <div class="structure-card">
             <strong>experiments/</strong>
@@ -122,6 +217,22 @@
           <div class="structure-card">
             <strong>notes/</strong>
             <p>Cleaned concepts promoted from the daily log.</p>
+          </div>
+          <div class="structure-card">
+            <strong>book/</strong>
+            <p>The Quarto book source and labs.</p>
+          </div>
+          <div class="structure-card">
+            <strong>maps/</strong>
+            <p>The bridge from days to chapters.</p>
+          </div>
+          <div class="structure-card">
+            <strong>prompts/</strong>
+            <p>The recovered daily exercise prompt system.</p>
+          </div>
+          <div class="structure-card">
+            <strong>source-material/</strong>
+            <p>The earlier journal preserved as source evidence.</p>
           </div>
         </div>
       </section>

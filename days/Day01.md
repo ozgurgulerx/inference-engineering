@@ -28,9 +28,16 @@ I now have:
 - A `days/` folder for daily writing.
 - A Runpod experiment folder.
 - Templates for daily notes, Runpod runs, and benchmark results.
+- A merged book layer for turning the strongest days into chapters.
 
 This is enough structure to start. I do not need a perfect curriculum before
 running the first experiment.
+
+## Book placement
+
+- Primary book part: Preface and Part V, framework-first implementation.
+- Candidate chapters: Executive map, vLLM from first principles, Runpod practical deployment.
+- Promotion status: raw day note with book map entry.
 
 ## First experiment direction
 
@@ -97,4 +104,3 @@ Day 01 is the start of making that stack concrete.
 - Fill in `experiments/runpod/2026-05-11-vllm-smoke-test.md`.
 - Put any raw results in `results/`.
 - Write Day 02 from the actual experiment, not from theory.
-

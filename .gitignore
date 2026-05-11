@@ -5,4 +5,10 @@ __pycache__/
 .pytest_cache/
 node_modules/
 results/**/*.tmp
-
+_site/
+book/.quarto/
+book/_book/
+book/.venv/
+book/.local-home*/
+book/.local-tools/
+book/__pycache__/

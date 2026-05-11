@@ -12,3 +12,9 @@ This folder is for daily notes written in my own words.
 ## Rule
 
 Write the raw version first. Do not polish before the key observation is down.
+
+## Promotion Path
+
+Each useful day should eventually point to one or more book chapters through
+`../maps/day-to-book.yml`. The day remains personal and chronological; the book
+gets the durable explanation.

@@ -1,0 +1,112 @@
+# Prior Journal and Runpod Lab Path
+
+This book is not starting from a blank page. It inherits a prior inference
+engineering journal with daily labs, benchmark scripts, prompts, topic notes,
+and an older book attempt.
+
+The goal of the merge is not to paste all prior writing into the book. The goal
+is to use the prior work as a source library, rerun or adapt the strongest
+experiments, and promote only the durable explanations.
+
+## What Was Preserved
+
+The prior journal now lives in `source-material/prior-inference-journal/`.
+
+The most useful parts are:
+
+- `JOURNAL_INDEX.md`: the original 19-day sequence.
+- `days/`: tiered daily exercises, scripts, notes, and experiment writeups.
+- `days02/`: a stronger full-stack map from workloads and evals through GPU
+  architecture, kernels, serving engines, distributed networking, deployment,
+  benchmarking, observability, and SRE economics.
+- `topics/`: cleaned concept notes on vLLM, quantization, serving patterns, and
+  TensorRT-LLM.
+- `books/inference-engineering/`: the older mdBook-style draft.
+- `prompts/`: the daily-coach prompt system that generated the exercise format.
+
+## How The Prior Work Will Be Used
+
+The prior journal is a backlog and evidence source. The new book uses it through
+four gates:
+
+1. **Map**: connect the old day, prompt, or topic to a chapter in
+   `maps/day-to-book.yml`.
+2. **Run**: adapt the experiment into a current Runpod note under
+   `experiments/runpod/`.
+3. **Measure**: store raw logs, tables, screenshots, and plots under `results/`.
+4. **Promote**: turn the durable lesson into `notes/` or a book chapter.
+
+This keeps the book honest. A prior exercise can inspire a chapter, but a
+chapter should still make a fresh claim, show current measurements, or mark the
+claim as a hypothesis.
+
+## Runpod As The Lab Substrate
+
+Runpod is the default environment for hands-on labs because it provides
+temporary GPU capacity without assuming a permanent cluster. The experiments in
+this book should treat Runpod as a controlled lab, not as a vague cloud box.
+
+Each Runpod run should record:
+
+- GPU model, VRAM, pod type, region, and hourly rate.
+- Container image, Python version, CUDA stack, vLLM version, and model revision.
+- Exact vLLM flags and server command.
+- Prompt workload, request shape, concurrency, output limit, and decoding
+  parameters.
+- TTFT, end-to-end latency, inter-token latency, tokens/sec, request throughput,
+  GPU memory, and cost.
+- Raw output path and one short interpretation.
+
+The practical Runpod plan lives in
+`experiments/runpod/prior-journal-lab-plan.md`.
+
+## First Experiment Ladder
+
+The old journal already suggests a strong experiment progression:
+
+| Step | Prior source | Book payoff |
+| --- | --- | --- |
+| vLLM smoke test | `day-002-GPU-node-bring-up` | A concrete Runpod deployment path |
+| vLLM capacity and OOM | `day-003-vLLM-capacity-and-OOM` | Capacity knobs, memory pressure, and benchmark discipline |
+| Quantization vs BF16 | `day-004-quantization-vs-bf16` | Speed, memory, cost, and quality tradeoffs |
+| SLM as probe | `day-006-slm-memory` | Why small models are useful diagnostic instruments |
+| Prefix caching and TTFT | `day-007-vllm-runtime-probes` | KV cache, repeated prefixes, and serving latency |
+| Latency metrics and SLOs | `day-009-latency-metrics-and-slo-lab` | Metrics vocabulary and p95/p99 thinking |
+| Speculative decoding | `day-013-speculative-decoding` | Advanced decoding speedups and failure modes |
+| Multi-GPU scaling | `day-014-multi-gpu-scaling` | Parallelism tradeoffs |
+| Multi-tenant QoS | `day-015-multi-tenant-qos` | Isolation, fairness, and noisy-neighbor behavior |
+| Cost accounting | `day-016-cost-efficiency-accounting` | Dollars per token and capacity planning |
+| Reliability drills | `day-017-reliability-guardrails` | Production failure behavior |
+| Alignment serving | `day-018-alignment-e2e-demo` | Behavior change versus serving cost |
+| MoE or state-space | `day-019-state-space-or-moe` | Architecture-specific inference behavior |
+
+## Salvaged Prompt System
+
+The original daily exercise generation prompts are preserved in `prompts/`.
+
+The important pattern is the **3-tier lab plan**:
+
+- Tier 1: a minimum useful experiment that can be completed even on a hard day.
+- Tier 2: a deeper measurement that adds a second axis or more reliable data.
+- Tier 3: a stretch investigation that can become a future chapter or case
+  study.
+
+The measurement-first daily log is equally important. It forces every day to
+capture setup, metrics, cost, quality, reliability, and next steps. That is the
+difference between a diary and an engineering record.
+
+## Editorial Rule
+
+Prior work is allowed to enter the book when it improves the reader's judgment.
+It should become one of these:
+
+- a measured result,
+- a failure mode,
+- a decision framework,
+- a diagram,
+- a benchmark harness,
+- a checklist,
+- a glossary term,
+- or a case study.
+
+Everything else can stay in the journal.

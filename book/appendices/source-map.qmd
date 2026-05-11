@@ -1,0 +1,75 @@
+# Source Map
+
+This appendix maps journal material in this repository into the book.
+
+## Source Corpus
+
+The canonical source repo is `ozgurgulerx/inference-engineering`.
+
+- Raw daily notes live in `days/`.
+- Runpod experiment records live in `experiments/runpod/`.
+- Benchmark artifacts and plots live in `results/`.
+- Cleaned intermediate concept notes live in `notes/`.
+- The promotion map lives in `maps/day-to-book.yml`.
+- Prior source material lives in `source-material/prior-inference-journal/`.
+- Salvaged daily exercise prompts live in `prompts/`.
+
+The book should not hide the journal process. Each chapter can cite the days,
+experiments, and result artifacts that made the explanation concrete.
+
+## Prior Journal Corpus
+
+The prior journal is preserved because it contains usable work:
+
+- 19 daily experiment folders.
+- A stronger second curriculum in `days02/`.
+- vLLM, quantization, serving-pattern, and TensorRT-LLM topic notes.
+- Benchmark scripts and small harnesses.
+- The prompt system that generated the 3-tier daily lab plans.
+
+The early chapter `chapters/00-source-journal-runpod-lab-path.qmd` explains how
+this corpus becomes current Runpod experiments and chapter material.
+
+## Mapped Topics
+
+| Source | Book destination |
+| --- | --- |
+| `days/Day01.md` | Preface, executive map, metrics, Runpod practical deployment |
+| `days/2026-05-11-day-001-start-here.md` | Preface and writing workflow |
+| `experiments/runpod/2026-05-11-vllm-smoke-test.md` | vLLM, Runpod, benchmarking harness |
+| `experiments/runpod/prior-journal-lab-plan.md` | Runpod lab ladder and experiment adaptation |
+| `results/` | Metrics, benchmark tables, cost and capacity planning |
+| `notes/` | Cleaned concept notes before chapter promotion |
+| `maps/day-to-book.yml` | Operating map from daily work to book chapters |
+| `prompts/daily-inference-coach.md` | Daily exercise generation and 3-tier lab design |
+| `source-material/prior-inference-journal/JOURNAL_INDEX.md` | Legacy 19-day experiment sequence |
+| `source-material/prior-inference-journal/days02/README.md` | Full-stack inference systems progression |
+
+## Prior Day Map
+
+| Prior source | Book destination |
+| --- | --- |
+| `day-002-GPU-node-bring-up` | CPU-GPU node architecture, Runpod practical deployment |
+| `day-003-vLLM-capacity-and-OOM` | vLLM, benchmarking harness, capacity planning |
+| `day-004-quantization-vs-bf16` | Quantization, numerics, quality checks |
+| `day-005-OS-and-NUMA-node-hardening` | CPU-GPU node architecture, configurable hardware surfaces |
+| `day-006-slm-memory` | SLM probes, host memory, vLLM first-token behavior |
+| `day-007-vllm-runtime-probes` | TTFT, prefix caching, batching, KV cache |
+| `day-008-groq-dc-dimensioning` | AI data center tradeoffs and specialized systems |
+| `day-009-latency-metrics-and-slo-lab` | Inference metrics, SLOs, observability |
+| `day-010-attention-architecture-gqa-mqa` | Transformer mechanics and KV cache |
+| `day-011-runtime-shootout` | Runtime map and serving engine comparisons |
+| `day-012-long-context-vs-rag` | Long context, RAG tradeoffs |
+| `day-013-speculative-decoding` | Speculative decoding |
+| `day-014-multi-gpu-scaling` | Multi-GPU and multi-node scaling |
+| `day-015-multi-tenant-qos` | Multitenancy and QoS |
+| `day-016-cost-efficiency-accounting` | Cost and capacity planning |
+| `day-017-reliability-guardrails` | Reliability and guardrail overhead |
+| `day-018-alignment-e2e-demo` | RL/policy inference and evals |
+| `day-019-state-space-or-moe` | MoE, state-space, and specialized model mechanics |
+
+## Promotion Rule
+
+A daily note can stay raw. A book chapter should only absorb the durable part:
+the measurement, mental model, failure mode, decision framework, diagram, or
+checklist that remains useful after the day is over.

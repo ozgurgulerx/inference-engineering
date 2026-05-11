@@ -1,0 +1,206 @@
+# Maps raw journal work to the curated book structure.
+# Keep this file small enough to edit every time a day or experiment is added.
+
+canonical_repo:
+  journal_home: days/
+  runpod_experiments: experiments/runpod/
+  results: results/
+  concept_notes: notes/
+  book: book/
+  prompts: prompts/
+  prior_source: source-material/prior-inference-journal/
+
+current_days:
+  - id: day-01
+    path: days/Day01.md
+    status: raw
+    book_targets:
+      - book/index.qmd
+      - book/chapters/00-source-journal-runpod-lab-path.qmd
+      - book/chapters/01-executive-map.qmd
+      - book/chapters/20-vllm-from-first-principles.qmd
+      - book/chapters/21-runpodai-practical-deployment.qmd
+    durable_points:
+      - repo structure
+      - write/run/measure/promote workflow
+      - first Runpod vLLM smoke-test direction
+
+prior_journal_days:
+  - id: legacy-day-001
+    path: source-material/prior-inference-journal/days/day-001-initial-setup/
+    book_targets:
+      - book/chapters/00-source-journal-runpod-lab-path.qmd
+      - book/chapters/01-executive-map.qmd
+    use_for:
+      - repo conventions
+      - daily log shape
+      - metrics placeholder structure
+  - id: legacy-day-002
+    path: source-material/prior-inference-journal/days/day-002-GPU-node-bring-up/
+    book_targets:
+      - book/chapters/07-ai-hardware-taxonomy.qmd
+      - book/chapters/08-cpu-gpu-node-architecture.qmd
+      - book/chapters/21-runpodai-practical-deployment.qmd
+    use_for:
+      - GPU node bring-up
+      - CUDA and vLLM smoke test
+      - Runpod SSH and endpoint discipline
+  - id: legacy-day-003
+    path: source-material/prior-inference-journal/days/day-003-vLLM-capacity-and-OOM/
+    book_targets:
+      - book/chapters/20-vllm-from-first-principles.qmd
+      - book/chapters/22-benchmarking-harness.qmd
+      - book/chapters/30-cost-and-capacity-planning.qmd
+    use_for:
+      - vLLM capacity grids
+      - OOM surface
+      - chat and batch benchmark harnesses
+  - id: legacy-day-004
+    path: source-material/prior-inference-journal/days/day-004-quantization-vs-bf16/
+    book_targets:
+      - book/chapters/18-memory-bandwidth-quantization-numerics.qmd
+      - book/chapters/22-benchmarking-harness.qmd
+    use_for:
+      - BF16 versus quantized comparison
+      - quality sanity prompt set
+      - quantization notes template
+  - id: legacy-day-005
+    path: source-material/prior-inference-journal/days/day-005-OS-and-NUMA-node-hardening/
+    book_targets:
+      - book/chapters/08-cpu-gpu-node-architecture.qmd
+      - book/chapters/09-configurable-hardware-surfaces.qmd
+    use_for:
+      - CPU governor and NUMA notes
+      - host-side performance hardening
+  - id: legacy-day-006
+    path: source-material/prior-inference-journal/days/day-006-slm-memory/
+    book_targets:
+      - book/chapters/08-cpu-gpu-node-architecture.qmd
+      - book/chapters/14-attention-kv-cache-long-context.qmd
+      - book/chapters/20-vllm-from-first-principles.qmd
+    use_for:
+      - SLM as a probe model
+      - allocator and page-cache behavior
+      - vLLM first-token and KV scaling notes
+  - id: legacy-day-007
+    path: source-material/prior-inference-journal/days/day-007-vllm-runtime-probes/
+    book_targets:
+      - book/chapters/14-attention-kv-cache-long-context.qmd
+      - book/chapters/20-vllm-from-first-principles.qmd
+      - book/chapters/22-benchmarking-harness.qmd
+    use_for:
+      - TTFT probe
+      - prefix caching benchmark
+      - batching client
+      - reusable prompt workload
+  - id: legacy-day-008
+    path: source-material/prior-inference-journal/days/day-008-groq-dc-dimensioning/
+    book_targets:
+      - book/chapters/02-ai-data-center-design-space.qmd
+      - book/chapters/05-data-center-stack-tradeoffs.qmd
+      - book/chapters/25-specialized-inference-systems.qmd
+    use_for:
+      - Groq dimensioning questions
+      - GPU versus LPU bridge
+      - capacity model templates
+      - specialized-system risk register
+  - id: legacy-day-009
+    path: source-material/prior-inference-journal/days/day-009-latency-metrics-and-slo-lab/
+    book_targets:
+      - book/chapters/06-inference-metrics-first-principles.qmd
+      - book/chapters/22-benchmarking-harness.qmd
+      - book/chapters/29-observability-reliability-security.qmd
+    use_for:
+      - streaming TTFT measurement
+      - load generation
+      - SLO table discipline
+  - id: legacy-day-010
+    path: source-material/prior-inference-journal/days/day-010-attention-architecture-gqa-mqa/
+    book_targets:
+      - book/chapters/13-transformer-inference-mechanics.qmd
+      - book/chapters/14-attention-kv-cache-long-context.qmd
+    use_for:
+      - MHA versus GQA versus MQA comparison
+      - attention architecture prompts
+  - id: legacy-day-011
+    path: source-material/prior-inference-journal/days/day-011-runtime-shootout/
+    book_targets:
+      - book/chapters/19-serving-engines-and-runtime-map.qmd
+    use_for:
+      - runtime comparison design
+      - vLLM, TensorRT-LLM, TGI, Triton contrast
+  - id: legacy-day-012
+    path: source-material/prior-inference-journal/days/day-012-long-context-vs-rag/
+    book_targets:
+      - book/chapters/14-attention-kv-cache-long-context.qmd
+    use_for:
+      - long-context versus retrieval experiment design
+  - id: legacy-day-013
+    path: source-material/prior-inference-journal/days/day-013-speculative-decoding/
+    book_targets:
+      - book/chapters/23-speculative-decoding.qmd
+    use_for:
+      - draft and target model benchmark plan
+      - rejection and quality notes
+  - id: legacy-day-014
+    path: source-material/prior-inference-journal/days/day-014-multi-gpu-scaling/
+    book_targets:
+      - book/chapters/26-multi-gpu-and-multi-node-scaling.qmd
+    use_for:
+      - data parallel versus tensor parallel experiment plan
+  - id: legacy-day-015
+    path: source-material/prior-inference-journal/days/day-015-multi-tenant-qos/
+    book_targets:
+      - book/chapters/27-multitenancy-and-qos.qmd
+    use_for:
+      - noisy-neighbor and priority scheduling plan
+  - id: legacy-day-016
+    path: source-material/prior-inference-journal/days/day-016-cost-efficiency-accounting/
+    book_targets:
+      - book/chapters/30-cost-and-capacity-planning.qmd
+    use_for:
+      - dollars per token accounting
+      - tenant cost attribution
+  - id: legacy-day-017
+    path: source-material/prior-inference-journal/days/day-017-reliability-guardrails/
+    book_targets:
+      - book/chapters/29-observability-reliability-security.qmd
+    use_for:
+      - failure drills
+      - guardrail overhead measurement
+  - id: legacy-day-018
+    path: source-material/prior-inference-journal/days/day-018-alignment-e2e-demo/
+    book_targets:
+      - book/chapters/16-rl-and-policy-inference.qmd
+      - book/chapters/28-evals-and-regression-testing.qmd
+    use_for:
+      - LoRA or DPO serving impact
+      - behavior and latency before/after checks
+  - id: legacy-day-019
+    path: source-material/prior-inference-journal/days/day-019-state-space-or-moe/
+    book_targets:
+      - book/chapters/15-moe-state-space-and-specialized-models.qmd
+    use_for:
+      - MoE and state-space serving implications
+
+prior_curriculum:
+  - path: source-material/prior-inference-journal/days02/
+    book_targets:
+      - book/chapters/00-source-journal-runpod-lab-path.qmd
+      - book/chapters/01-executive-map.qmd
+    use_for:
+      - full-stack progression
+      - section-level experiment planning
+      - milestone framing
+
+prompt_assets:
+  - path: prompts/daily-inference-coach.md
+    use_for: generating 3-tier daily lab plans
+  - path: prompts/measurement-first-daily-log.md
+    use_for: logging setup, metrics, cost, quality, reliability, and next steps
+  - path: prompts/technical-focus.md
+    use_for: keeping the daily work balanced across the inference stack
+  - path: prompts/100-day-learning-goals.md
+    use_for: original curriculum and audit-driven topic injections
+  - path: prompts/success-outcomes.md
+    use_for: outcome checklist for book and lab completeness

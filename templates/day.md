@@ -12,6 +12,12 @@ Write this in plain language.
 - Item 2.
 - Item 3.
 
+## Book placement
+
+- Primary book part:
+- Candidate chapter:
+- Promotion status: raw / note / chapter draft / chapter update
+
 ## In my own words
 
 Write the raw version here before polishing.
@@ -51,4 +57,3 @@ Explain the takeaway in my own words.
 ## Next
 
 - 
-

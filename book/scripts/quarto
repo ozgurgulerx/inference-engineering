@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+set -euo pipefail
+
+ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
+QUARTO_BIN="$ROOT/.local-tools/quarto-full/quarto-core.pkg/Payload/bin/quarto"
+
+if [[ -x "$QUARTO_BIN" ]]; then
+  export HOME="${QUARTO_HOME:-$ROOT/.local-home-cache}"
+  exec "$QUARTO_BIN" "$@"
+fi
+
+if command -v quarto >/dev/null 2>&1; then
+  exec quarto "$@"
+fi
+
+echo "Quarto CLI not found." >&2
+echo "Install system Quarto with: brew install --cask quarto" >&2
+echo "Or restore the local CLI under: $ROOT/.local-tools" >&2
+exit 1
