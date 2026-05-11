@@ -1,0 +1,24 @@
+name: Experiment
+description: Track a Runpod or inference engineering experiment.
+title: "[Experiment]: "
+labels:
+  - experiment
+body:
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What are you trying to learn?
+    validations:
+      required: true
+  - type: input
+    id: hardware
+    attributes:
+      label: Hardware
+      description: GPU, CPU, memory, or provider details.
+  - type: textarea
+    id: metrics
+    attributes:
+      label: Metrics
+      description: What will you measure?
+

@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="A public inference engineering lab notebook for daily notes, Runpod experiments, AI hardware, serving systems, and production LLM performance."
+    />
+    <title>Inference Engineering</title>
+    <link rel="icon" href="assets/favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <canvas id="stack-scene" aria-hidden="true"></canvas>
+
+    <header class="site-header">
+      <a class="brand" href="./" aria-label="Inference Engineering home">
+        <span class="brand-mark"></span>
+        <span>Inference Engineering</span>
+      </a>
+      <nav aria-label="Primary navigation">
+        <a href="#days">Days</a>
+        <a href="#runpod">Runpod</a>
+        <a href="#structure">Structure</a>
+        <a href="https://github.com/ozgurgulerx/inference-engineering">GitHub</a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">Public lab notebook</p>
+          <h1>Learning inference engineering one real experiment at a time.</h1>
+          <p class="lede">
+            Daily notes, Runpod experiments, hardware observations, serving
+            benchmarks, and the messy path from model calls to production
+            inference systems.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="https://github.com/ozgurgulerx/inference-engineering/blob/main/days/2026-05-11-day-001-start-here.md">Start with Day 001</a>
+            <a class="button secondary" href="https://github.com/ozgurgulerx/inference-engineering/blob/main/templates/day.md">Use the day template</a>
+          </div>
+        </div>
+
+        <aside class="metrics-panel" aria-label="Lab focus areas">
+          <div>
+            <span class="metric-label">Core loop</span>
+            <strong>Write / Run / Measure / Explain</strong>
+          </div>
+          <div>
+            <span class="metric-label">Lab substrate</span>
+            <strong>Runpod GPUs + vLLM</strong>
+          </div>
+          <div>
+            <span class="metric-label">North star</span>
+            <strong>Tokens, latency, memory, cost</strong>
+          </div>
+        </aside>
+      </section>
+
+      <section id="days" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Daily notes</p>
+          <h2>Write first. Polish later.</h2>
+        </div>
+        <div class="day-grid">
+          <a class="day-card" href="https://github.com/ozgurgulerx/inference-engineering/blob/main/days/2026-05-11-day-001-start-here.md">
+            <span>Day 001</span>
+            <h3>Start here</h3>
+            <p>Set the baseline: what I am learning, what I will measure, and how I will write.</p>
+          </a>
+          <a class="day-card muted" href="https://github.com/ozgurgulerx/inference-engineering/blob/main/templates/day.md">
+            <span>Template</span>
+            <h3>Daily note</h3>
+            <p>A repeatable structure for raw notes, questions, commands, results, and reflections.</p>
+          </a>
+          <a class="day-card muted" href="https://github.com/ozgurgulerx/inference-engineering/tree/main/days">
+            <span>Index</span>
+            <h3>All days</h3>
+            <p>The growing list of daily entries and what each day changed in my understanding.</p>
+          </a>
+        </div>
+      </section>
+
+      <section id="runpod" class="section split">
+        <div>
+          <p class="eyebrow">Runpod experiments</p>
+          <h2>Every run should leave behind evidence.</h2>
+          <p>
+            Runpod experiments should record the GPU, image, model, command,
+            benchmark settings, raw results, cost notes, and what actually
+            changed after measurement.
+          </p>
+        </div>
+        <div class="steps">
+          <a href="https://github.com/ozgurgulerx/inference-engineering/tree/main/experiments/runpod">Runpod experiment index</a>
+          <a href="https://github.com/ozgurgulerx/inference-engineering/blob/main/experiments/runpod/2026-05-11-vllm-smoke-test.md">vLLM smoke test draft</a>
+          <a href="https://github.com/ozgurgulerx/inference-engineering/blob/main/templates/runpod-experiment.md">Runpod experiment template</a>
+          <a href="https://github.com/ozgurgulerx/inference-engineering/blob/main/templates/benchmark-result.md">Benchmark result template</a>
+        </div>
+      </section>
+
+      <section id="structure" class="section">
+        <div class="section-heading">
+          <p class="eyebrow">Repo structure</p>
+          <h2>A small system for compounding notes.</h2>
+        </div>
+        <div class="structure-grid">
+          <div class="structure-card">
+            <strong>days/</strong>
+            <p>Daily writing in my own words.</p>
+          </div>
+          <div class="structure-card">
+            <strong>experiments/</strong>
+            <p>Runpod configs, commands, and benchmark reports.</p>
+          </div>
+          <div class="structure-card">
+            <strong>results/</strong>
+            <p>Raw outputs, tables, screenshots, and plots.</p>
+          </div>
+          <div class="structure-card">
+            <strong>notes/</strong>
+            <p>Cleaned concepts promoted from the daily log.</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span>Built by Ozgur Guler</span>
+      <a href="https://github.com/ozgurgulerx/inference-engineering">View source</a>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
